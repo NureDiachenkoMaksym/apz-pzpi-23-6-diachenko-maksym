@@ -1,4 +1,4 @@
-@startuml
+﻿@startuml
 component "Mobile UI" as UI
 component "ViewModel" as VM
 component "Repository" as Repo
@@ -11,3 +11,4 @@ Repo --> ApiClient
 ApiClient --> API
 API --> DB
 @enduml
+

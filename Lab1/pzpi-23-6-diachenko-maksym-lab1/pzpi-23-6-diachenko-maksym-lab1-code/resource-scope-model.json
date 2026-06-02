@@ -1,4 +1,4 @@
-{
+﻿{
   "system": "Natural Resources Analysis Software System",
   "initial_release": {
     "resource_types": [
@@ -35,3 +35,4 @@
     "no cadastral services"
   ]
 }
+

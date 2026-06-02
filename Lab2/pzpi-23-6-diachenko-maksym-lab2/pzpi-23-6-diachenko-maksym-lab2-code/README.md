@@ -1,4 +1,4 @@
-# Mobile client — Natural Resources Analysis
+﻿# Mobile client — Natural Resources Analysis
 
 Android Kotlin mobile client for field observations and quick analytics.
 
@@ -17,3 +17,4 @@ Android Kotlin mobile client for field observations and quick analytics.
 - `data.repository` — data access abstraction.
 - `ui` — Compose UI.
 - `viewmodel` — UI state and business actions.
+

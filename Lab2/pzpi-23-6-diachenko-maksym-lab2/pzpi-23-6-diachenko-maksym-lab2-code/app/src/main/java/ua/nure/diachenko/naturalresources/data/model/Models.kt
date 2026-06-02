@@ -1,4 +1,4 @@
-package ua.nure.diachenko.naturalresources.data.model
+﻿package ua.nure.diachenko.naturalresources.data.model
 
 data class ResourceIndicator(
     val id: Long,
@@ -28,3 +28,4 @@ data class DashboardSummary(
     val soilAverage: Double,
     val riskLevel: String
 )
+

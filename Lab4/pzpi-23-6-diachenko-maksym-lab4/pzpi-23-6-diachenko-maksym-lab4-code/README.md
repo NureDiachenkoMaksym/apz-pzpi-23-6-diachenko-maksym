@@ -1,4 +1,4 @@
-# Backend scaling demo — Natural Resources Analysis
+﻿# Backend scaling demo — Natural Resources Analysis
 
 This folder contains a scalable backend demo for the Natural Resources Analysis Software System.
 
@@ -22,3 +22,4 @@ locust -f locustfile.py --host=http://localhost:8080
 ## Kubernetes demo
 
 The `k8s` directory contains deployment, service and autoscaling manifests.
+

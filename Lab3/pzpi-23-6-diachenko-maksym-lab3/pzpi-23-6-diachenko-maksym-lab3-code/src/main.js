@@ -1,4 +1,4 @@
-const translations = {
+﻿const translations = {
   uk: {
     title: 'Програмна система аналізу природних ресурсів',
     subtitle: 'Вебклієнт для аналітиків, адміністраторів та відкритого перегляду даних',
@@ -184,3 +184,4 @@ function average(values) {
 }
 
 render();
+

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Date, Float, Integer, String, Text
+﻿from sqlalchemy import Column, Date, Float, Integer, String, Text
 from .database import Base
 
 
@@ -17,3 +17,4 @@ class Observation(Base):
     latitude = Column(Float, nullable=True)
     longitude = Column(Float, nullable=True)
     comment = Column(Text, nullable=True)
+

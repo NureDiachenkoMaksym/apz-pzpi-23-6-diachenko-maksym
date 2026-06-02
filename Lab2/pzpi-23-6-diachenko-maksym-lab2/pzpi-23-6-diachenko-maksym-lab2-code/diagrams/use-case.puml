@@ -1,4 +1,4 @@
-@startuml
+﻿@startuml
 left to right direction
 actor "Польовий оператор" as Operator
 actor "Аналітик" as Analyst
@@ -13,3 +13,4 @@ Operator --> UC3
 Analyst --> UC1
 Analyst --> UC4
 @enduml
+

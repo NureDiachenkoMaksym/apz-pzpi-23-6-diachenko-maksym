@@ -1,4 +1,4 @@
-@startuml
+﻿@startuml
 component "Web UI" as UI
 component "Dashboard" as Dashboard
 component "Admin Panel" as Admin
@@ -14,3 +14,4 @@ Admin --> Client
 Client --> API
 API --> DB
 @enduml
+

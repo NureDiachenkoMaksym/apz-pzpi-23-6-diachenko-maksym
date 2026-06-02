@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "natural-resources-web-client",
   "version": "1.0.0",
   "type": "module",
@@ -11,3 +11,4 @@
   },
   "devDependencies": {}
 }
+

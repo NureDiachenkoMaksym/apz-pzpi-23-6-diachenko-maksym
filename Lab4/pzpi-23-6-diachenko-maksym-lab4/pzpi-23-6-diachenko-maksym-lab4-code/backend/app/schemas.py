@@ -1,4 +1,4 @@
-from datetime import date
+﻿from datetime import date
 from pydantic import BaseModel, Field
 
 
@@ -39,3 +39,4 @@ class DashboardSummary(BaseModel):
     water_average: float
     soil_average: float
     risk_level: str
+

@@ -1,4 +1,4 @@
-# Final demo materials
+﻿# Final demo materials
 
 This folder contains final demo materials for the Natural Resources Analysis Software System.
 
@@ -10,3 +10,4 @@ This folder contains final demo materials for the Natural Resources Analysis Sof
 4. Show mobile client code and field observation flow.
 5. Show backend API and scaling configuration.
 6. Summarize implemented and planned features.
+

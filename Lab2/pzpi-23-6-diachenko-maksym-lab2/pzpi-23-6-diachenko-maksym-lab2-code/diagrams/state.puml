@@ -1,4 +1,4 @@
-@startuml
+﻿@startuml
 [*] --> Draft
 Draft --> ReadyToSync : дані введено
 ReadyToSync --> Syncing : натиснуто синхронізацію
@@ -7,3 +7,4 @@ Syncing --> Failed : помилка мережі або валідації
 Failed --> ReadyToSync : повторна спроба
 Synced --> [*]
 @enduml
+

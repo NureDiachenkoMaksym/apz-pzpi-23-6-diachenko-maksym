@@ -1,4 +1,4 @@
-@startuml
+﻿@startuml
 package "components" {
   [Dashboard]
   [AdminPanel]
@@ -14,3 +14,4 @@ package "i18n" {
 components --> services
 components --> i18n
 @enduml
+

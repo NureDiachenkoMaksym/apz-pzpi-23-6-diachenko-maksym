@@ -1,4 +1,4 @@
-package ua.nure.diachenko.naturalresources
+﻿package ua.nure.diachenko.naturalresources
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -66,3 +66,4 @@ fun NaturalResourcesScreen(viewModel: MainViewModel = viewModel()) {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-# Scope and Limitations — Natural Resources Analysis Software System
+﻿# Scope and Limitations — Natural Resources Analysis Software System
 
 ## 3.1 Scope of Initial Release
 
@@ -11,3 +11,4 @@ Future releases may include AI-assisted anomaly detection, forecasting, risk cla
 ## 3.3 Limitations and Exclusions
 
 The MVP excludes legally binding electronic document workflow, cadastral services, offline mobile fieldwork, autonomous decision-making and full-scale training of proprietary AI models. AI output is considered advisory and must be verified by domain specialists.
+

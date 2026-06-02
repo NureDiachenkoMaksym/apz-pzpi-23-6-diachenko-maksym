@@ -1,4 +1,4 @@
-package ua.nure.diachenko.naturalresources.data.repository
+﻿package ua.nure.diachenko.naturalresources.data.repository
 
 import ua.nure.diachenko.naturalresources.data.model.ObservationRequest
 import ua.nure.diachenko.naturalresources.data.network.ApiClient
@@ -12,3 +12,4 @@ class ResourceRepository {
 
     suspend fun sendObservation(request: ObservationRequest) = api.createObservation(request)
 }
+

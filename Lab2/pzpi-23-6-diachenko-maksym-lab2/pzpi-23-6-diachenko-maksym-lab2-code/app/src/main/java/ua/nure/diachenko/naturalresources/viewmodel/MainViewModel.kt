@@ -1,4 +1,4 @@
-package ua.nure.diachenko.naturalresources.viewmodel
+﻿package ua.nure.diachenko.naturalresources.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -52,3 +52,4 @@ class MainViewModel : ViewModel() {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package ua.nure.diachenko.naturalresources.data.network
+﻿package ua.nure.diachenko.naturalresources.data.network
 
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -17,3 +17,4 @@ interface ApiService {
     @POST("api/observations")
     suspend fun createObservation(@Body request: ObservationRequest): ResourceIndicator
 }
+

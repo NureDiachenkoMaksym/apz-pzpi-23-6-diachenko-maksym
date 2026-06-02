@@ -1,4 +1,4 @@
-from locust import HttpUser, between, task
+﻿from locust import HttpUser, between, task
 
 
 class NaturalResourcesUser(HttpUser):
@@ -26,3 +26,4 @@ class NaturalResourcesUser(HttpUser):
             "unit": "ratio",
             "source": "locust"
         })
+

@@ -1,4 +1,4 @@
-from datetime import date
+﻿from datetime import date
 from statistics import mean
 from fastapi import Depends, FastAPI, Query
 from sqlalchemy.orm import Session
@@ -80,3 +80,4 @@ def dashboard_summary(db: Session = Depends(get_db)):
         soil_average=soil,
         risk_level=risk,
     )
+
