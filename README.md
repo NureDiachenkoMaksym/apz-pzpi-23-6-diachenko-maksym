@@ -1,4 +1,4 @@
-﻿# apz-pzpi-23-6-diachenko-maksym
+# apz-pzpi-23-6-diachenko-maksym
 
 ПЗПІ-23-6
 

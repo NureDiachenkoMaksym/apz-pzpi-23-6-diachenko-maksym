@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: nra
+      POSTGRES_PASSWORD: nra
+      POSTGRES_DB: nra
+    ports:
+      - "5432:5432"
