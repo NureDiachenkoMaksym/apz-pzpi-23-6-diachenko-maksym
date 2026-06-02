@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natural-resources-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: natural-resources-api
+  template:
+    metadata:
+      labels:
+        app: natural-resources-api
+    spec:
+      containers:
+        - name: api
+          image: natural-resources-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: postgresql+psycopg://app:app@postgres:5432/natural_resources
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor "Гість" as Guest
+actor "Аналітик" as Analyst
+actor "Адміністратор" as Admin
+rectangle "Web-застосунок" {
+  usecase "Перегляд відкритих даних" as UC1
+  usecase "Фільтрація та аналіз" as UC2
+  usecase "Експорт звітів" as UC3
+  usecase "Управління користувачами" as UC4
+  usecase "Імпорт даних" as UC5
+  usecase "Резервне копіювання" as UC6
+}
+Guest --> UC1
+Analyst --> UC2
+Analyst --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+@enduml

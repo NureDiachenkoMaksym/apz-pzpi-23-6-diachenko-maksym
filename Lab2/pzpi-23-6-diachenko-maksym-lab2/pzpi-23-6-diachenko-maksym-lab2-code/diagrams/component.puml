@@ -1,0 +1,13 @@
+@startuml
+component "Mobile UI" as UI
+component "ViewModel" as VM
+component "Repository" as Repo
+component "API Client" as ApiClient
+component "Backend REST API" as API
+database "PostgreSQL" as DB
+UI --> VM
+VM --> Repo
+Repo --> ApiClient
+ApiClient --> API
+API --> DB
+@enduml

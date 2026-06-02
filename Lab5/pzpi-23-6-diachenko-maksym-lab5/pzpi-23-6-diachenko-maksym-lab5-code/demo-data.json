@@ -1,0 +1,39 @@
+{
+  "project": "Програмна система аналізу природних ресурсів",
+  "resources": [
+    {
+      "type": "forest",
+      "territory": "Харківська область",
+      "indicator": "Лісовий покрив",
+      "value": 44.8,
+      "unit": "%"
+    },
+    {
+      "type": "water",
+      "territory": "Харківська область",
+      "indicator": "Індекс забруднення",
+      "value": 61.4,
+      "unit": "index"
+    },
+    {
+      "type": "soil",
+      "territory": "Полтавська область",
+      "indicator": "Індекс деградації",
+      "value": 38.1,
+      "unit": "index"
+    }
+  ],
+  "implemented": [
+    "backend API",
+    "web client",
+    "mobile client skeleton",
+    "Docker scaling",
+    "Locust test"
+  ],
+  "planned": [
+    "real open data connectors",
+    "AI forecasting",
+    "full authentication",
+    "cloud deployment"
+  ]
+}

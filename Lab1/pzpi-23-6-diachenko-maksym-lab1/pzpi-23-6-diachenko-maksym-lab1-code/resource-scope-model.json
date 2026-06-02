@@ -1,0 +1,37 @@
+{
+  "system": "Natural Resources Analysis Software System",
+  "initial_release": {
+    "resource_types": [
+      "land",
+      "water",
+      "forest"
+    ],
+    "clients": [
+      "web",
+      "mobile"
+    ],
+    "backend": "REST API with validation and role-based access",
+    "iot": "basic environmental sensor ingestion"
+  },
+  "future_ai": {
+    "application": [
+      "anomaly detection",
+      "forecasting",
+      "risk classification",
+      "summary generation"
+    ],
+    "data_collection": [
+      "observations",
+      "sensor readings",
+      "validation statuses",
+      "expert labels"
+    ],
+    "model_strategy": "start with external AI API, then fine-tune models after collecting enough quality data"
+  },
+  "limitations": [
+    "no legal e-document workflow",
+    "no offline mobile mode",
+    "no autonomous decisions",
+    "no cadastral services"
+  ]
+}

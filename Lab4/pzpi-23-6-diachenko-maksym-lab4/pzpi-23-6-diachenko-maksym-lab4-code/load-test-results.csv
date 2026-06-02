@@ -1,4 +1,4 @@
-instances,rps,average_latency_ms
-1,85,480
-2,158,310
-3,221,240
+replicas,users,average_rps,average_response_ms,error_rate
+1,50,120,180,0.01
+2,50,225,145,0.01
+3,50,315,130,0.02

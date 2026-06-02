@@ -1,22 +1,28 @@
-from locust import HttpUser, task, between
+from locust import HttpUser, between, task
+
 
 class NaturalResourcesUser(HttpUser):
     wait_time = between(1, 3)
 
-    @task(4)
-    def dashboard(self):
-        self.client.get("/api/reports/summary?resource=forest&period=2024")
+    @task(3)
+    def health(self):
+        self.client.get("/health")
 
-    @task(2)
-    def measurements(self):
-        self.client.get("/api/measurements?territory=kharkiv&page=1")
+    @task(5)
+    def dashboard(self):
+        self.client.get("/api/dashboard/summary")
+
+    @task(4)
+    def observations(self):
+        self.client.get("/api/observations")
 
     @task(1)
-    def create_measurement(self):
-        self.client.post("/api/measurements", json={
-            "resourceType": "water",
-            "territoryId": 1,
-            "period": "2024-Q2",
-            "value": 72.4,
-            "source": "demo"
+    def create_observation(self):
+        self.client.post("/api/observations", json={
+            "resource_type": "forest",
+            "territory": "Тестова область",
+            "indicator_name": "NDVI",
+            "value": 0.57,
+            "unit": "ratio",
+            "source": "locust"
         })

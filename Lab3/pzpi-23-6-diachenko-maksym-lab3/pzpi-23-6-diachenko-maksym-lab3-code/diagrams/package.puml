@@ -1,0 +1,16 @@
+@startuml
+package "components" {
+  [Dashboard]
+  [AdminPanel]
+  [ResourcesTable]
+}
+package "services" {
+  [ApiClient]
+  [BackupService]
+}
+package "i18n" {
+  [Translations]
+}
+components --> services
+components --> i18n
+@enduml

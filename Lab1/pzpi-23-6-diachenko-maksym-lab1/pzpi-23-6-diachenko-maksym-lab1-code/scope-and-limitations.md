@@ -1,15 +1,13 @@
-# Scope and Limitations
+# Scope and Limitations — Natural Resources Analysis Software System
 
-Матеріали до лабораторної роботи 1.
+## 3.1 Scope of Initial Release
 
-## Scope of Initial Release
+The initial release includes a backend API, relational database, web client, mobile client and basic IoT data ingestion. The system supports land, water and forest resources, role-based access, import/export, validation, analytical dashboards and field observations.
 
-Початковий реліз охоплює backend API, Web-клієнт, мобільний клієнт, IoT-канал отримання вимірювань, централізовану базу даних, звітність і базову аналітику.
+## 3.2 Scope of Subsequent Releases
 
-## Scope of Subsequent Releases
+Future releases may include AI-assisted anomaly detection, forecasting, risk classification, automated analytical summaries and recommendation generation. The system will collect historical observations, sensor readings, validation statuses, user confirmations and expert labels for further model improvement.
 
-Майбутні релізи передбачають інтеграцію ШІ для прогнозування, виявлення аномалій, класифікації якості даних і формування пояснень до звітів.
+## 3.3 Limitations and Exclusions
 
-## Limitations and Exclusions
-
-До MVP не включаються юридично значущий документообіг, повноцінна кадастрова ГІС, автоматичне прийняття рішень ШІ та повний офлайн-режим.
+The MVP excludes legally binding electronic document workflow, cadastral services, offline mobile fieldwork, autonomous decision-making and full-scale training of proprietary AI models. AI output is considered advisory and must be verified by domain specialists.

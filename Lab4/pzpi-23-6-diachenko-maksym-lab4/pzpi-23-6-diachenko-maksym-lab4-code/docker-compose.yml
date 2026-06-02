@@ -1,32 +1,30 @@
-version: "3.9"
 services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: natural_resources
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://app:app@db:5432/natural_resources
+    depends_on:
+      - db
+
   nginx:
-    image: nginx:1.25
+    image: nginx:1.27-alpine
     ports:
       - "8080:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - backend
-  backend:
-    build: ./backend
-    deploy:
-      replicas: 3
-    environment:
-      - DATABASE_URL=postgresql://app:app@postgres:5432/resources
-      - REDIS_URL=redis://redis:6379
-    depends_on:
-      - postgres
-      - redis
-  postgres:
-    image: postgres:16
-    environment:
-      - POSTGRES_USER=app
-      - POSTGRES_PASSWORD=app
-      - POSTGRES_DB=resources
-    volumes:
-      - db_data:/var/lib/postgresql/data
-  redis:
-    image: redis:7
+      - api
+
 volumes:
   db_data:
