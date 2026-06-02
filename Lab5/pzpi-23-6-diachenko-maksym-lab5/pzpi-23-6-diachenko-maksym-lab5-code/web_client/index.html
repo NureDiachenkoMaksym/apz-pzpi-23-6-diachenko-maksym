@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoResource Analytics</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <div class="eyebrow">NATURAL RESOURCES ANALYSIS SOFTWARE SYSTEM</div>
+      <h1 data-i18n="title">Програмна система аналізу природних ресурсів</h1>
+      <p data-i18n="subtitle">Єдине вікно для збору, перевірки, аналізу та експорту даних про землю, воду і ліси.</p>
+    </div>
+    <div class="top-actions">
+      <button id="langToggle">UA / EN</button>
+      <select id="roleSelect">
+        <option value="user">Користувач</option>
+        <option value="admin">Адміністратор</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="filters panel">
+      <label>Ресурс
+        <select id="resourceFilter">
+          <option value="all">Усі</option>
+          <option value="forest">Лісові ресурси</option>
+          <option value="water">Водні ресурси</option>
+          <option value="land">Земельні ресурси</option>
+        </select>
+      </label>
+      <label>Територія
+        <input id="territoryFilter" placeholder="Напр. Харків" />
+      </label>
+      <label>Період
+        <select id="periodFilter">
+          <option value="all">Усі</option>
+          <option value="2025-Q1">2025-Q1</option>
+          <option value="2024-Q4">2024-Q4</option>
+        </select>
+      </label>
+      <button id="resetBtn">Скинути</button>
+    </section>
+
+    <section class="kpis">
+      <article class="kpi green"><span>Записів</span><strong id="totalCount">0</strong></article>
+      <article class="kpi green"><span>Перевірено</span><strong id="verifiedCount">0</strong></article>
+      <article class="kpi red"><span>Високий ризик</span><strong id="riskCount">0</strong></article>
+      <article class="kpi orange"><span>Середнє значення</span><strong id="avgValue">0</strong></article>
+    </section>
+
+    <section id="adminPanel" class="panel admin hidden">
+      <h2>Адміністративні функції</h2>
+      <p>Модерація якості даних, імпорт, експорт і резервне копіювання.</p>
+      <div class="admin-actions">
+        <button id="approveBtn">Затвердити чернетки</button>
+        <button id="exportBtn">Експорт PDF/Excel</button>
+        <button id="backupBtn">Створити backup</button>
+        <button id="importBtn">Імітація імпорту CSV</button>
+      </div>
+      <pre id="adminLog"></pre>
+    </section>
+
+    <section class="grid">
+      <section class="panel table-panel">
+        <h2>Показники ресурсів</h2>
+        <table>
+          <thead><tr><th>Ресурс</th><th>Територія</th><th>Період</th><th>Показник</th><th>Значення</th><th>Статус</th></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+      <section class="panel chart-panel">
+        <h2>Аналітична картка</h2>
+        <p>Значення показників за вибіркою</p>
+        <canvas id="chart" width="520" height="260"></canvas>
+      </section>
+    </section>
+  </main>
+  <script src="src/app.js"></script>
+</body>
+</html>

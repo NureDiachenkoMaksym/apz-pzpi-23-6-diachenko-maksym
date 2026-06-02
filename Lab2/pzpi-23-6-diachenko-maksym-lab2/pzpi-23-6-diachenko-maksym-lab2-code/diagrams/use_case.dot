@@ -1,0 +1,26 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad="0.3", nodesep="0.45", ranksep="0.7"];
+  node [fontname="DejaVu Sans", fontsize=12, shape=ellipse, style="filled", fillcolor="#F6FAFF", color="#1F4E79"];
+  edge [fontname="DejaVu Sans", fontsize=10, color="#333333"];
+  operator [shape=box, label="Оператор\nвнесення даних", fillcolor="#FFF8E1", color="#8A6D00"];
+  analyst [shape=box, label="Аналітик", fillcolor="#FFF8E1", color="#8A6D00"];
+  admin [shape=box, label="Адміністратор", fillcolor="#FFF8E1", color="#8A6D00"];
+  backend [shape=component, label="Серверна частина", fillcolor="#E8F5E9", color="#2E7D32"];
+  subgraph cluster_app {
+    label="Мобільний застосунок"; fontname="DejaVu Sans"; fontsize=13; color="#90A4AE";
+    login [label="Автентифікація"];
+    view [label="Перегляд показників"];
+    filter [label="Фільтрація за ресурсом,\nтериторією і періодом"];
+    entry [label="Створення польового\nзапису показника"];
+    evidence [label="Додавання фото або\nкоментаря як доказу"];
+    sync [label="Синхронізація з сервером"];
+    status [label="Перегляд статусу\nсинхронізації"];
+    settings [label="Керування довідниками\nта параметрами"];
+  }
+  operator -> login; operator -> entry; operator -> evidence; operator -> sync; operator -> status;
+  analyst -> login; analyst -> view; analyst -> filter; analyst -> status;
+  admin -> settings; admin -> view;
+  sync -> backend [label="HTTPS/JSON"];
+  login -> backend [label="JWT"];
+  settings -> backend [label="довідники"];
+}

@@ -1,0 +1,26 @@
+{
+  "project": "EcoResource Analytics / Natural Resources Analysis Software System",
+  "student": "Дяченко Максим",
+  "group": "ПЗПІ-23-6",
+  "initial_release": [
+    "server REST API",
+    "web client",
+    "mobile client",
+    "IoT data input",
+    "resource analytics",
+    "role-based access"
+  ],
+  "subsequent_releases": [
+    "open geodata integration",
+    "AI anomaly prediction",
+    "GIS maps",
+    "real IoT devices",
+    "advanced reporting"
+  ],
+  "limitations": [
+    "demo data for academic release",
+    "AI is planned for later releases",
+    "limited production security hardening",
+    "no full national-scale deployment in MVP"
+  ]
+}

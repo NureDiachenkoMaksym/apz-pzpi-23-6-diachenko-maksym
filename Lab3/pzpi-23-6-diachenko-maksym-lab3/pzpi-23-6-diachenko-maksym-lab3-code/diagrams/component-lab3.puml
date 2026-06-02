@@ -1,0 +1,27 @@
+@startuml
+package "Browser" {
+  [UI Components]
+  [i18n Module]
+  [Role Router]
+  [State Store]
+  [API Client]
+}
+package "Backend" {
+  [Auth API]
+  [Resource API]
+  [Admin API]
+  [Export API]
+}
+database "PostgreSQL" as DB
+[UI Components] --> [State Store]
+[Role Router] --> [UI Components]
+[i18n Module] --> [UI Components]
+[API Client] --> [Auth API]
+[API Client] --> [Resource API]
+[API Client] --> [Admin API]
+[API Client] --> [Export API]
+[Auth API] --> DB
+[Resource API] --> DB
+[Admin API] --> DB
+[Export API] --> DB
+@enduml

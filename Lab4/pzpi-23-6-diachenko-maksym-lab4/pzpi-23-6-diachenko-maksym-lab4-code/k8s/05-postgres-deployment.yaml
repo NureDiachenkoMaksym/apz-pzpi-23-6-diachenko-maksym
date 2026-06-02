@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nra-postgres
+  namespace: natural-resources
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nra-postgres
+  template:
+    metadata:
+      labels:
+        app: nra-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:16
+          env:
+            - name: POSTGRES_DB
+              value: nra
+            - name: POSTGRES_USER
+              value: nra
+            - name: POSTGRES_PASSWORD
+              value: nra
+          ports:
+            - containerPort: 5432

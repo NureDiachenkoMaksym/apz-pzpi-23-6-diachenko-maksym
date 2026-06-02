@@ -1,0 +1,32 @@
+services:
+  nginx:
+    image: nginx:1.27
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+
+  api:
+    build: ./backend
+    deploy:
+      replicas: 3
+    environment:
+      - DATABASE_URL=postgresql://nra:nra@postgres:5432/nra
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=nra
+      - POSTGRES_USER=nra
+      - POSTGRES_PASSWORD=nra
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  redis:
+    image: redis:7

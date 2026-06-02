@@ -1,0 +1,21 @@
+@startuml
+node "Clients" as C
+node "Load Balancer" as LB
+node "Kubernetes Cluster" {
+  node "API Pod #1" as A1
+  node "API Pod #2" as A2
+  node "API Pod #N" as AN
+  database "PostgreSQL" as DB
+  node "Redis Cache" as R
+}
+C --> LB : HTTPS
+LB --> A1 : REST
+LB --> A2 : REST
+LB --> AN : REST
+A1 --> DB : SQL
+A2 --> DB : SQL
+AN --> DB : SQL
+A1 --> R : cache
+A2 --> R : cache
+AN --> R : cache
+@enduml

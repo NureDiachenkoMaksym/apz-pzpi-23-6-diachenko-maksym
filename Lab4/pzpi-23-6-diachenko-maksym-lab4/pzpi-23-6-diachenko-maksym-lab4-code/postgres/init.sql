@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS resource_indicators (
+  id SERIAL PRIMARY KEY,
+  resource_type VARCHAR(32) NOT NULL,
+  territory VARCHAR(128) NOT NULL,
+  period VARCHAR(16) NOT NULL,
+  indicator VARCHAR(128) NOT NULL,
+  value NUMERIC NOT NULL,
+  unit VARCHAR(32) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

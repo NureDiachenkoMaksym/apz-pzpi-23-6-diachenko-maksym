@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nra-api
+  namespace: natural-resources
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nra-api
+  template:
+    metadata:
+      labels:
+        app: nra-api
+    spec:
+      containers:
+        - name: api
+          image: nra-api:1.0
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

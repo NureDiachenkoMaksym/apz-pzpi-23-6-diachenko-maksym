@@ -1,0 +1,15 @@
+@startuml
+package "Backend" {
+  [Auth Service]
+  [Resource Service]
+  [Report Service]
+  [Import Service]
+}
+[Load Balancer] --> [Auth Service]
+[Load Balancer] --> [Resource Service]
+[Load Balancer] --> [Report Service]
+[Load Balancer] --> [Import Service]
+[Resource Service] --> [PostgreSQL]
+[Report Service] --> [PostgreSQL]
+[Resource Service] --> [Redis]
+@enduml

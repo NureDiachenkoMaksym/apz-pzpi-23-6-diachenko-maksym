@@ -1,0 +1,12 @@
+@startuml
+package "src/ui" { class DashboardView; class AdminView; class ResourceTable; class Toolbar }
+package "src/i18n" { class translations; class formatDate; class sortText; class direction }
+package "src/api" { class ApiClient; class AuthService; class ResourceService; class ExportService }
+package "src/state" { class AppState; class RoleState; class FilterState }
+package "src/domain" { class Resource; class Indicator; class User; class BackupRecord }
+"src/ui" ..> "src/i18n"
+"src/ui" ..> "src/state"
+"src/state" ..> "src/domain"
+"src/api" ..> "src/domain"
+"src/ui" ..> "src/api"
+@enduml

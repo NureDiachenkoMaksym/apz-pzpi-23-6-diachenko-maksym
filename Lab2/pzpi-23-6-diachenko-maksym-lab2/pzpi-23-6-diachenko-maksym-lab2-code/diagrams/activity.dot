@@ -1,0 +1,24 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.4", ranksep="0.45"];
+  node [fontname="DejaVu Sans", fontsize=11, shape=box, style="rounded,filled", fillcolor="#F6FAFF", color="#1F4E79"];
+  edge [fontname="DejaVu Sans", fontsize=10, color="#333333"];
+  start [shape=circle, label="", width=0.18, fillcolor="#000000", color="#000000"];
+  auth [label="Користувач входить\nдо мобільного застосунку"];
+  select [label="Вибір типу ресурсу,\nтериторії та показника"];
+  enter [label="Введення значення,\nперіоду і коментаря"];
+  validate [shape=diamond, label="Дані коректні?"];
+  save [label="Збереження чернетки\nу локальному сховищі"];
+  online [shape=diamond, label="Є мережа?"];
+  sync [label="Синхронізація\nчерез Backend API"];
+  status [label="Оновлення статусу\nDraft / Synced / Error"];
+  fix [label="Показ помилки\nта виправлення даних"];
+  finish [shape=doublecircle, label="", width=0.22, fillcolor="#000000", color="#000000"];
+  start -> auth -> select -> enter -> validate;
+  validate -> save [label="так"];
+  validate -> fix [label="ні"];
+  fix -> enter;
+  save -> online;
+  online -> sync [label="так"];
+  online -> status [label="ні"];
+  sync -> status -> finish;
+}

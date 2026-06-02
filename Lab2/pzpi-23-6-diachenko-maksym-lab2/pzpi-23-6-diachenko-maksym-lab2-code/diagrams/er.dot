@@ -1,0 +1,18 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.55"];
+  node [fontname="DejaVu Sans", fontsize=10, shape=record, style="filled", fillcolor="#F9FBFF", color="#1F4E79"];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#333333"];
+  User [label="{User|userId: UUID\nfullName: String\nrole: String\ntokenHash: String}"];
+  ResourceType [label="{ResourceType|resourceTypeId: UUID\nnameUk: String\nnameEn: String}"];
+  Indicator [label="{Indicator|indicatorId: UUID\nresourceTypeId: UUID\nname: String\nunit: String\nminValue: Decimal\nmaxValue: Decimal}"];
+  Territory [label="{Territory|territoryId: UUID\nname: String\nregion: String\nlatitude: Double\nlongitude: Double}"];
+  MeasurementDraft [label="{MeasurementDraft|draftId: UUID\nindicatorId: UUID\nterritoryId: UUID\nvalue: Decimal\nperiod: Date\nstatus: String\ncreatedAt: DateTime}"];
+  Evidence [label="{Evidence|evidenceId: UUID\ndraftId: UUID\nfileUri: String\ncomment: String}"];
+  SyncLog [label="{SyncLog|syncId: UUID\ndraftId: UUID\noperation: String\nresult: String\nsyncedAt: DateTime}"];
+  User -> MeasurementDraft [label="creates"];
+  ResourceType -> Indicator [label="1..*"];
+  Indicator -> MeasurementDraft [label="1..*"];
+  Territory -> MeasurementDraft [label="1..*"];
+  MeasurementDraft -> Evidence [label="0..*"];
+  MeasurementDraft -> SyncLog [label="0..*"];
+}

@@ -1,0 +1,24 @@
+{
+  "server_base_url": "http://localhost:3000",
+  "login": {
+    "email": "operator@nure.ua",
+    "password": "operator123"
+  },
+  "device": {
+    "device_id": "NR-SENSOR-001",
+    "region_id": 1,
+    "indicator_id": 2,
+    "interval_sec": 5
+  },
+  "sensor": {
+    "min_value": 65,
+    "max_value": 95,
+    "noise": 4.0
+  },
+  "processing": {
+    "method": "ewma",
+    "ewma_alpha": 0.35,
+    "ma_window": 5,
+    "z_threshold": 2.0
+  }
+}

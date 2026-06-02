@@ -1,0 +1,59 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "resource": "forest",
+      "resource_uk": "Лісові ресурси",
+      "territory": "Харківська область",
+      "period": "2025-Q1",
+      "indicator": "Лісистість",
+      "value": 14.8,
+      "unit": "%",
+      "status": "approved"
+    },
+    {
+      "id": 2,
+      "resource": "water",
+      "resource_uk": "Водні ресурси",
+      "territory": "Харківська область",
+      "period": "2025-Q1",
+      "indicator": "Якість води",
+      "value": 78,
+      "unit": "score",
+      "status": "approved"
+    },
+    {
+      "id": 3,
+      "resource": "land",
+      "resource_uk": "Земельні ресурси",
+      "territory": "Харківський район",
+      "period": "2025-Q1",
+      "indicator": "Родючість ґрунту",
+      "value": 63.5,
+      "unit": "score",
+      "status": "draft"
+    },
+    {
+      "id": 4,
+      "resource": "forest",
+      "resource_uk": "Лісові ресурси",
+      "territory": "Чугуївський район",
+      "period": "2024-Q4",
+      "indicator": "NDVI",
+      "value": 0.62,
+      "unit": "index",
+      "status": "published"
+    },
+    {
+      "id": 5,
+      "resource": "water",
+      "resource_uk": "Водні ресурси",
+      "territory": "Ізюмський район",
+      "period": "2024-Q4",
+      "indicator": "Площа водойм",
+      "value": 110.4,
+      "unit": "km²",
+      "status": "approved"
+    }
+  ]
+}
